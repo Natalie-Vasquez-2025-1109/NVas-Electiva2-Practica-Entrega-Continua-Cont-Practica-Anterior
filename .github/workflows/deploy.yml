@@ -27,9 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            naki028/hola-devops:latest
-            naki028/hola-devops:${{ github.sha }}
+          tags: naki028/nvas-electiva2-practica-entrega-continua-cont-practica-anterior:latest
 
       - name: Desplegar aplicacion en Render
         env:
@@ -38,6 +36,4 @@ jobs:
         run: |
           curl --fail-with-body --request POST \
             --url "https://api.render.com/v1/services/${RENDER_SERVICE_ID}/deploys" \
-            --header "Authorization: Bearer ${RENDER_API_KEY}" \
-            --header "Content-Type: application/json" \
-            --data "{\"imageUrl\":\"docker.io/naki028/hola-devops:${GITHUB_SHA}\"}"
+            --header "Authorization: Bearer ${RENDER_API_KEY}"
