@@ -12,7 +12,7 @@ Cada push a la rama main ejecuta el workflow `.github/workflows/deploy.yml`, que
 
 ## Enlaces
 
-- Repositorio: https://github.com/Natalie-Vasquez-2025-1109/NVas-Electiva2-Practica-Entrega-Continua-Cont-Practica-Anterior
+- Render: https://nvas-electiva2-practica-entrega-continua.onrender.com/
 - Imagen en Docker Hub: https://hub.docker.com/r/naki028/nvas-electiva2-practica-entrega-continua-cont-practica-anterior
 
 ## Estructura
@@ -27,10 +27,3 @@ Cada push a la rama main ejecuta el workflow `.github/workflows/deploy.yml`, que
 - `DOCKERHUB_TOKEN`
 - `RENDER_API_KEY`
 - `RENDER_SERVICE_ID`
-
-## Ejecucion local
-
-    docker build -t nvas-app .
-    docker run -p 5000:5000 nvas-app
-
-Abrir http://localhost:5000
